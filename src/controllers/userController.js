@@ -55,6 +55,8 @@ const findUserByNameAndPassword = async (req, res) => {
 
         // Compare hashed passwords
         const hashedPassword = md5(password);
+        console.log(hashedPassword);
+        console.log(user.password);
         if (hashedPassword !== user.password) {
             return res.status(400).json({ message: 'Invalid name or password' });
         }
