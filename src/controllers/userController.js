@@ -50,7 +50,7 @@ const findUserByNameAndPassword = async (req, res) => {
         // Find user by name
         let user = await User.findOne({ name });
         if (!user) {
-            return res.status(400).json({ message: 'Invalid name or password' });
+            return res.status(400).json({ message: 'The user not exist' });
         }
 
         // Compare hashed passwords
