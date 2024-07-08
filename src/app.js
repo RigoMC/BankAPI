@@ -14,7 +14,7 @@ connectDB();
 // Middleware para parsear JSON
 app.use(express.json());
 
-const allowedOrigins = ['http://localhost:3000','https://diego-garciabadbank.netlify.app/'];
+const allowedOrigins = ['http://localhost:3000','https://diego-garciabadbank.netlify.app'];
 
 const corsOptions = {
     origin: (origin, callback) => {
